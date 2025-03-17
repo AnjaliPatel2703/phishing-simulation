@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Login</title>
+</head>
+<body>
+    <h2>Login to Your Account</h2>
+    <form onsubmit="captureData(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        function captureData(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            console.log("Captured Data: ", "Username:", username, "Password:", password);
+            alert("Login failed! This is just a test simulation.");
+        }
+    </script>
+</body>
+</html>
